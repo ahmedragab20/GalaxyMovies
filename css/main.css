@@ -1,0 +1,562 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+* {
+  text-transform: capitalize;
+}
+
+*::-moz-selection {
+  background-color: #b09570b4;
+  color: #0B0B09;
+}
+
+*::selection {
+  background-color: #b09570b4;
+  color: #0B0B09;
+}
+
+/* Thescroll handle */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e2dfdf;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b09570b4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #B09570;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: #B09570;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.to-top.go {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.to-top:hover a {
+  margin-top: -5px;
+}
+
+.to-top a {
+  color: #fff;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header {
+  /* Navbar Design */
+}
+
+header nav {
+  min-height: 10vh;
+  width: 100%;
+  position: relative;
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  /* Logo design */
+  /* The List Design */
+}
+
+header nav .logo {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translate(-5%, -50%);
+          transform: translate(-5%, -50%);
+  cursor: pointer;
+  font-family: "Goudy Bookletter 1911", serif;
+}
+
+header nav .logo h1 a {
+  color: #0B0B09;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+header nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-gap: 10px;
+  -moz-gap: 10px;
+  -ms-gap: 10px;
+  -o-gap: 10px;
+  gap: 10px;
+  height: 10vh;
+  width: 70%;
+  list-style: none;
+  margin-left: auto;
+}
+
+header nav .links li {
+  font-size: 1rem;
+  padding: 2px;
+  border-top: 2px solid transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav .links li:hover {
+  border-top: 2px solid #B09570;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+header nav .links li a {
+  color: #252525;
+  text-decoration: none;
+}
+
+header nav .links .order-now {
+  text-align: center;
+  letter-spacing: 1.5px;
+  border: 2px solid #B09570;
+  margin-left: 20%;
+}
+
+header nav .links .order-now:hover {
+  border: 2px solid #B09570;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  background-color: #B09570;
+  color: #FFF;
+}
+
+header nav .links .order-now a {
+  font-size: 1rem;
+  padding: 15px 10px;
+  letter-spacing: 1.5px;
+}
+
+header nav .links .order-now a:hover {
+  color: #FFF;
+}
+
+header .banner {
+  margin-top: 10vh;
+  text-transform: uppercase;
+}
+
+header .banner .txt {
+  margin-top: 45%;
+}
+
+header .banner .txt h2 {
+  letter-spacing: 11.5px;
+  line-height: 1.8;
+  font-size: 2rem;
+}
+
+header .banner .txt p {
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+  font-size: 0.9rem;
+  color: #0b0b09d0;
+}
+
+header .banner .txt .btn {
+  border-radius: 0;
+  padding: 5px 30px;
+  font-size: 1.1rem;
+  background-color: #B09570;
+  border: none;
+}
+
+article {
+  margin-top: 5vh;
+}
+
+article .txt {
+  margin-top: 45%;
+}
+
+article .txt h2 {
+  letter-spacing: 11.5px;
+  line-height: 1.8;
+  font-size: 2rem;
+}
+
+article .txt p {
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+  font-size: 0.9rem;
+  color: #0b0b09d0;
+}
+
+article .txt .btn {
+  border-radius: 0;
+  padding: 5px 30px;
+  font-size: 1.1rem;
+}
+
+.info {
+  background-color: #EEE;
+  margin: 5vh auto;
+}
+
+.info h3 {
+  font-size: 4.5rem;
+  font-family: "Goudy Bookletter 1911", serif;
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+}
+
+.info p {
+  font-size: 0.9rem;
+  color: #0b0b09d0;
+  letter-spacing: 1.5px;
+}
+
+.slider h2 {
+  letter-spacing: 6.5px;
+  line-height: 1.8;
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 3rem;
+}
+
+.slider .swiper-container {
+  width: 65%;
+  height: 100%;
+}
+
+.slider .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.slider .swiper-slide img {
+  display: block;
+  width: 75%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider .swiper-slide {
+  width: 60%;
+}
+
+.slider .swiper-slide:nth-child(2n) {
+  width: 40%;
+}
+
+.slider .swiper-slide:nth-child(3n) {
+  width: 20%;
+}
+
+.cards {
+  margin: 10vh auto;
+}
+
+.cards h2, .cards h3 {
+  font-family: "Goudy Bookletter 1911", serif;
+  letter-spacing: 6.5px;
+  line-height: 2.8;
+}
+
+.cards h3 {
+  letter-spacing: 1.5px;
+  line-height: 2;
+}
+
+.cards .card {
+  color: #0b0b09d0;
+  -webkit-box-shadow: 10px 10px 20px #eee, -10px -10px 20px #eee;
+          box-shadow: 10px 10px 20px #eee, -10px -10px 20px #eee;
+  margin: auto;
+}
+
+.cards .card .image {
+  overflow: hidden;
+}
+
+.cards .card .image img {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cards .card .image img:hover {
+  -webkit-transform: scale(1.1) rotate(1deg);
+          transform: scale(1.1) rotate(1deg);
+}
+
+.subscribe .container {
+  -webkit-box-shadow: 10px 10px 20px #eee, -10px -10px 20px #eee;
+          box-shadow: 10px 10px 20px #eee, -10px -10px 20px #eee;
+  padding: 60px;
+}
+
+.subscribe .container h2 {
+  font-family: "Goudy Bookletter 1911", serif;
+  line-height: 1.8;
+  letter-spacing: 4.5px;
+}
+
+.subscribe .container p {
+  width: 80%;
+  color: #0b0b09d0;
+  line-height: 1.8;
+  letter-spacing: 1.5px;
+}
+
+.subscribe .container .col-lg-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subscribe .container .col-lg-4 .btn {
+  border-radius: 0;
+  padding: 10px 40px;
+  font-size: 1.1rem;
+  background-color: #B09570;
+  border: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.subscribe .container .col-lg-4 .btn:hover {
+  letter-spacing: 2.5px;
+}
+
+footer .part-1 {
+  margin: 15px auto;
+  line-height: 1.8;
+  letter-spacing: 1.5px;
+}
+
+footer .part-1 img {
+  width: 35px;
+}
+
+footer .part-1 .span {
+  font-size: 1.3rem;
+}
+
+footer .part-1 h2 {
+  display: inline-block;
+  margin: 20px auto;
+  font-family: "Goudy Bookletter 1911", serif;
+}
+
+footer .part-1 p {
+  color: #0b0b09d0;
+}
+
+footer .part-1 i {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-size: 2rem;
+  margin: 10px 10px 10px 0;
+  color: #0b0b09d0;
+}
+
+footer .part-1 i:hover {
+  color: #0B0B09;
+}
+
+footer .part-2 p a, footer .part-3 p a, footer .part-4 p a {
+  color: #0b0b09d0;
+  padding: 5px;
+}
+
+footer h6 {
+  padding: 30px 0;
+}
+
+@media (max-width: 991px) {
+  header nav {
+    position: relative;
+    width: 100%;
+    /* The 'X' button design */
+  }
+  header nav .logo {
+    font-size: 90%;
+  }
+  header nav .burger {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    -webkit-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
+    z-index: 2;
+    cursor: pointer;
+  }
+  header nav .burger > div {
+    width: 25px;
+    height: 2px;
+    margin: 5px;
+    background-color: #B09570;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  header nav .links {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #eeece8;
+    -webkit-clip-path: circle(10vh at 95% -10%);
+            clip-path: circle(10vh at 95% -10%);
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    pointer-events: none;
+  }
+  header nav .links.active {
+    -webkit-clip-path: circle(155vh at 100% 10px);
+    -moz-clip-path: circle(155vh at 100% 10px);
+    -ms-clip-path: circle(155vh at 100% 10px);
+    -o-clip-path: circle(155vh at 100% 10px);
+    clip-path: circle(155vh at 100% 10px);
+    pointer-events: all;
+  }
+  header nav .links li {
+    opacity: 0;
+    margin-right: 10%;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  header nav .links li.fade {
+    opacity: 1;
+  }
+  header nav .links li a {
+    font-size: 1.2rem;
+    color: #0B0B09;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  header nav .links .order-now {
+    margin-left: 0;
+  }
+  header nav .toggle .line1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 6px);
+            transform: rotate(-45deg) translate(-4px, 6px);
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  }
+  header nav .toggle .line2 {
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  }
+  header nav .toggle .line3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -6px);
+            transform: rotate(45deg) translate(-4px, -6px);
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  }
+  header .banner {
+    margin-top: 0;
+  }
+  header .banner .txt {
+    margin-top: 5%;
+  }
+  article .txt {
+    margin-top: 5%;
+  }
+  .slider h2 {
+    font-size: 2.5rem;
+  }
+  .slider .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .slider .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .subscribe {
+    text-align: center;
+  }
+  .subscribe .container {
+    padding: 20px 10px;
+  }
+  .subscribe .container p {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

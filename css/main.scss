@@ -1,0 +1,393 @@
+$mainColor:#B09570;
+$fadeColor:#b09570b4;
+$color: #0B0B09;
+$lightFont: #0b0b09d0 ;
+$headline: 'Goudy Bookletter 1911', serif;
+$letterSpacing: 1.5px;
+$lineHeight:1.8;
+$fontSize: 1rem;
+$transition: all 0.3s ease-in-out;
+// Global Designs
+html,
+body
+{font-family: 'Poppins', sans-serif;overflow-x: hidden;scroll-behavior: smooth;}
+*{text-transform: capitalize;}
+*::selection{background-color: $fadeColor; color: $color;}
+/* Thescroll handle */
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {background: #e2dfdf;}
+/* Handle */
+::-webkit-scrollbar-thumb {background: $fadeColor;}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {background: $mainColor;}
+// The FontFamily
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
+// Start The Header
+//To Top Button
+.to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: $mainColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    cursor: pointer;
+    transition: $transition;
+    &.go {opacity: 1;pointer-events: all;}
+    &:hover{
+        a{margin-top: -5px;}
+    }
+    a {
+        color: #fff;
+        font-size: 1.2rem;
+        transition: $transition;
+    }
+}
+header{
+    /* Navbar Design */
+nav {
+    min-height: 10vh;
+    width: 100%;
+    position: relative;
+    background-color: #FFF;
+    position: fixed;top: 0;
+    z-index: 2;
+    text-transform: capitalize;
+    letter-spacing: $letterSpacing;
+    /* Logo design */
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-5%, -50%);
+    cursor: pointer;
+    font-family: $headline;
+    h1 a {color: $color;text-decoration: none;font-size: $fontSize + 0.8;}}
+    /* The List Design */
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    -webkit-gap: 10px;
+    -moz-gap: 10px;
+    -ms-gap: 10px;
+    -o-gap: 10px;
+    gap: 10px;
+    height: 10vh;
+    width: 70%;
+    list-style: none;
+    margin-left: auto;
+    li {
+        font-size: $fontSize;
+        padding: 2px;
+        border-top: 2px solid transparent;
+        transition: $transition;
+    &:hover{border-top: 2px solid $mainColor;transform: translateY(5px);}
+    a {color: #252525;text-decoration: none;}
+    }
+    .order-now {
+        text-align: center;
+        letter-spacing: $letterSpacing;
+        border: 2px solid $mainColor;
+        margin-left: 20%;
+        &:hover{
+            border: 2px solid $mainColor;
+            transform: translateY(0);
+            background-color: $mainColor;
+            color: #FFF;
+        } 
+        a{
+        font-size: $fontSize;
+        padding: 15px 10px;
+        letter-spacing: $letterSpacing;
+        &:hover{color:#FFF}
+        }
+    }
+}
+}
+.banner{
+    margin-top: 10vh;
+    text-transform: uppercase;
+    .txt{
+        margin-top: 45%;
+        h2{
+            letter-spacing: $letterSpacing + 10;
+            line-height: $lineHeight;
+            font-size: $fontSize + 1;
+        }
+        p{
+            letter-spacing: $letterSpacing;
+            line-height: $lineHeight;
+            font-size: $fontSize - 0.1;
+            color: $lightFont;
+        }
+        .btn{
+            border-radius: 0;
+            padding: 5px 30px;
+            font-size: $fontSize + 0.1;
+            background-color: $mainColor;
+            border: none;
+        }
+    }
+    
+}
+}
+article{
+    margin-top: 5vh;
+    .txt{
+        margin-top: 45%;
+        h2{
+            letter-spacing: $letterSpacing + 10;
+            line-height: $lineHeight;
+            font-size: $fontSize + 1;
+        }
+        p{
+            letter-spacing: $letterSpacing;
+            line-height: $lineHeight;
+            font-size: $fontSize - 0.1;
+            color: $lightFont;
+        }
+        .btn{
+            border-radius: 0;
+            padding: 5px 30px;
+            font-size: $fontSize + 0.1;
+        }
+    }
+}
+.info{
+    background-color: #EEE;
+    margin: 5vh auto;
+    h3{
+        font-size: $fontSize + 3.5;
+        font-family: $headline;
+        letter-spacing: $letterSpacing;
+        line-height: $lineHeight;
+    }
+    p{
+        font-size: $fontSize - 0.1;
+        color: $lightFont;
+        letter-spacing: $letterSpacing;
+    }
+}
+// Slider
+.slider{
+    h2{
+        letter-spacing: $letterSpacing + 5px;
+        line-height: $lineHeight;
+        font-family: $headline;
+        font-size: $fontSize + 2;
+    }
+    .swiper-container {
+        width: 65%;
+        height: 100%;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 75%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper-slide {width: 60%;}
+      .swiper-slide:nth-child(2n) {width: 40%;}
+      .swiper-slide:nth-child(3n) {width: 20%;}
+}
+// the cards design
+.cards{
+    margin: 10vh auto;
+    h2, h3{
+        font-family: $headline;
+        letter-spacing: $letterSpacing + 5px;
+        line-height: $lineHeight + 1;
+    }
+    h3{
+        letter-spacing: $letterSpacing;
+        line-height: $lineHeight + 0.2;
+    }
+    .card{
+        color: $lightFont;
+        box-shadow: 10px 10px 20px #eee, -10px -10px 20px #eee;
+        margin: auto;
+        .image{
+            overflow: hidden;
+            img{
+                transition: $transition;
+                &:hover{
+                    transform: scale(1.1) rotate(1deg);
+                }
+            }
+        } 
+    }
+}
+// the subscribe sction
+.subscribe{
+    .container{
+        box-shadow: 10px 10px 20px #eee, -10px -10px 20px #eee;padding: 60px;
+        h2{
+            font-family: $headline;
+            line-height: $lineHeight;
+            letter-spacing: $letterSpacing + 3px;
+        }
+        p{
+            width: 80%;
+            color: $lightFont;
+            line-height: $lineHeight;
+            letter-spacing: $letterSpacing;
+        }
+        .col-lg-4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn{
+                border-radius: 0;
+                padding: 10px 40px;
+                font-size: $fontSize + 0.1;
+                background-color: $mainColor;
+                border: none;
+                transition: all 0.3s ease-in-out;
+            &:hover{letter-spacing: $letterSpacing + 1px;}
+            }
+        }
+    }
+}
+// Footer design
+footer{
+.part-1{
+    margin: 15px auto;
+        line-height: $lineHeight;
+        letter-spacing: $letterSpacing;
+        img{width: 35px;}
+        .span{font-size: $fontSize + 0.3;}
+        h2{display: inline-block;margin: 20px auto;font-family: $headline;}
+        p{color: $lightFont;}
+        i{
+            transition: all 0.3s ease-in-out;
+            font-size: $fontSize + 1;
+            margin: 10px 10px 10px 0;
+            color: $lightFont;
+            &:hover{color: $color;}
+        }
+    }
+    .part-2, .part-3, .part-4{
+        p{
+            a{color: $lightFont;padding: 5px;}
+        }
+    }
+    h6{padding: 30px 0;}
+}
+// Media Query
+@media (max-width:991px) {
+    header{
+        nav {
+            position: relative;
+            width: 100%;
+            .logo {font-size: 90%;}
+            .burger {
+                position: absolute;
+                top: 50%;
+                right: 5%;
+                transform: translate(-5%, -50%);
+                z-index: 2;
+                cursor: pointer;
+                &> div {
+                    width: 25px;
+                    height: 2px;
+                    margin: 5px;
+                    background-color: $mainColor;
+                    transition: $transition
+                }
+            }
+            .links {
+                &.active {
+                    -webkit-clip-path: circle(155vh at 100% 10px);
+                    -moz-clip-path: circle(155vh at 100% 10px);
+                    -ms-clip-path: circle(155vh at 100% 10px);
+                    -o-clip-path: circle(155vh at 100% 10px);
+                    clip-path: circle(155vh at 100% 10px);
+                    pointer-events: all;
+                }
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+                background-color: rgb(238, 236, 232);
+                clip-path: circle(10vh at 95% -10%);
+                transition: all 0.8s ease-in-out;
+                pointer-events: none;
+                li {
+                    opacity: 0;
+                    margin-right: 10%;
+                    transition: $transition;
+                    &.fade {opacity: 1}
+                    a {font-size: 1.2rem;color: $color;transition: all 0.3s ease-in-out;}
+                }
+                .order-now{margin-left: 0;}
+            }
+            /* The 'X' button design */
+            .toggle{
+                .line1 {
+                    transform: rotate(-45deg) translate(-4px, 6px);
+                    transition: transform 0.5s ease-in-out;
+                }
+                .line2 {opacity: 0;transition: transform 0.5s ease-in-out;}
+                .line3 {
+                    transform: rotate(45deg) translate(-4px, -6px);
+                    transition: transform 0.5s ease-in-out;
+                }
+            }
+        }
+        .banner{
+            margin-top: 0;
+            .txt{margin-top: 5%;}
+        }
+    }
+    article{.txt{margin-top: 5%;}}
+    .slider{
+        h2{font-size: $fontSize + 1.5;}
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+          }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .subscribe{
+        text-align: center;
+        .container{
+            padding: 20px 10px;
+            p{width: 100%;}
+        } 
+    }
+}
+// Done El7amdullah
