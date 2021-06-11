@@ -12,14 +12,6 @@ burger.addEventListener("click", () => {
     //the X transition
     burger.classList.toggle('toggle');
 });
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
 //to top button
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100) {
@@ -28,3 +20,14 @@ window.addEventListener("scroll", () => {
         toTop.classList.remove('go');
     }
 })
+// The Slider
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    freeMode: true,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
